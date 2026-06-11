@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Nuestra historia de amor - Feliz Tercer Aniversario">
+    <meta name="theme-color" content="#faf7f2">
+    <title>3 Años a tu lado | Feliz Aniversario</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Dancing+Script:wght@500;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+    <div id="preloader" class="preloader">
+        <div class="preloader-inner">
+            <div class="rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="heart-center">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+            </div>
+            <h2 class="preloader-text">Recopilando recuerdos...</h2>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+        </div>
+    </div>
+
+    <header class="main-header" id="navbar">
+        <nav class="nav-container">
+            <a href="#inicio" class="logo">
+                <span class="logo-text">X y V</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#cancion" class="nav-link">Melodía</a></li>
+                <li><a href="#cronometro" class="nav-link">El Tiempo</a></li>
+                <li><a href="#historia" class="nav-link">Historia</a></li>
+                <li><a href="#razones" class="nav-link">Motivos</a></li>
+                <li><a href="#galeria" class="nav-link">Instantes</a></li>
+                <li><a href="#carta-section" class="nav-link">Para Ti</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <canvas id="bokeh-canvas" class="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="badge-anniversary reveal">18 de Agosto de 2026</div>
+            <h1 class="hero-title reveal delay-1">Feliz Tercer<br>Aniversario</h1>
+            <p class="hero-subtitle reveal delay-2">1095 días amándote un poco más cada mañana.</p>
+    </section>
+
+    <section id="cancion" class="vinyl-section">
+        <div class="container vinyl-container">
+            <div class="vinyl-text" data-aos="fade-right">
+                <span class="sub-heading">La banda sonora de nuestra vida</span>
+                <h2>Nuestra Canción</h2>
+                <div class="separator-left"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.28 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.09C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.28 18.6,15.36 13.45,20.04L12,21.35Z"/></svg></div>
+                <p>Cada historia de amor tiene una melodía que detiene el tiempo. Enciende el tocadiscos, sube el volumen y deja que nuestra canción nos acompañe en este viaje a través de nuestros recuerdos.</p>
+                
+                <div class="audio-controls">
+                    <button id="vinyl-play-btn" class="vinyl-btn play">
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="icon-play"><path d="M8 5v14l11-7z"/></svg>
+                        </span>
+                        <span class="btn-text">Reproducir</span>
+                    </button>
+                    <div class="volume-control">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vinyl-player-wrapper" data-aos="fade-left">
+                <div class="vinyl-player">
+                    <div class="platter">
+                        <div class="vinyl-record" id="the-vinyl">
+                            <div class="vinyl-grooves"></div>
+                            <div class="vinyl-label">
+                                <span>Photograph</span>
+                                <strong>Ed Sheeran</strong>
+                            </div>
+                            <div class="vinyl-hole"></div>
+                        </div>
+                    </div>
+                    <div class="tonearm" id="the-tonearm">
+                        <div class="tonearm-pivot"></div>
+                        <div class="tonearm-rod"></div>
+                        <div class="tonearm-head"></div>
+                    </div>
+                </div>
+                
+                <audio id="romantic-audio" loop preload="auto">
+                    <source src="nuestra-cancion.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <section id="cronometro" class="counter-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="sub-heading">Desde aquel 18 de Agosto de 2023</span>
+                <h2>Cada segundo es un regalo</h2>
+                <div class="separator"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.28 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.09C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.28 18.6,15.36 13.45,20.04L12,21.35Z"/></svg></div>
+            </div>
+
+            <div class="time-grid">
+                <div class="time-block" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="time-value" id="t-years">3</div><div class="time-label">Años</div>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-block" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="time-value" id="t-months">0</div><div class="time-label">Meses</div>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-block" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="time-value" id="t-days">0</div><div class="time-label">Días</div>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-block" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="time-value" id="t-hours">0</div><div class="time-label">Horas</div>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-block" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="time-value" id="t-minutes">0</div><div class="time-label">Minutos</div>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-block highlight" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="time-value" id="t-seconds">0</div><div class="time-label">Segundos</div>
+                </div>
+            </div>
+            
+            <div class="live-status" data-aos="fade-up" data-aos-delay="700">
+                <span class="pulse-dot"></span> Contando hacia la eternidad...
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="timeline-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="sub-heading">El hilo rojo del destino</span>
+                <h2>Nuestro Viaje Juntos</h2>
+                <div class="separator"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.28 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.09C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.28 18.6,15.36 13.45,20.04L12,21.35Z"/></svg></div>
+            </div>
+
+            <div class="journey-wrapper">
+                <div class="journey-line"></div>
+                
+                <div class="journey-node left" data-aos="fade-right">
+                    <div class="node-icon">✨</div>
+                    <div class="node-content card-hover">
+                        <span class="node-date">18 de Agosto, 2023</span>
+                        <h3>El Comienzo de Todo</h3>
+                        <p>El día que la casualidad se convirtió en nuestro destino. Dos historias separadas decidieron empezar a escribirse en el mismo libro. Mi vida cambió para siempre.</p>
+                    </div>
+                </div>
+
+                <div class="journey-node right" data-aos="fade-left">
+                    <div class="node-icon">🌍</div>
+                    <div class="node-content card-hover">
+                        <span class="node-date">Primer Año</span>
+                        <h3>Descubriendo el Mundo</h3>
+                        <p>Aprender tus manías, descubrir tus sonrisas y darnos cuenta de que cada rincón del mundo es mejor si estás a mi lado sosteniendo mi mano.</p>
+                    </div>
+                </div>
+
+                <div class="journey-node left" data-aos="fade-right">
+                    <div class="node-icon">🏡</div>
+                    <div class="node-content card-hover">
+                        <span class="node-date">Segundo Año</span>
+                        <h3>Construyendo Nuestro Refugio</h3>
+                        <p>Pasar de ser dos personas enamoradas a ser un verdadero equipo. Nuestro propio universo privado lleno de complicidad.</p>
+                    </div>
+                </div>
+
+                <div class="journey-node right" data-aos="fade-left">
+                    <div class="node-icon">💍</div>
+                    <div class="node-content card-hover highlight-card">
+                        <span class="node-date">18 de Agosto, 2026</span>
+                        <h3>Tres Años y Contando</h3>
+                        <p>Llegar a este tercer aniversario no es una meta, es solo un punto de control en el viaje más increíble de mi vida. Lo mejor está por venir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="razones" class="reasons-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="sub-heading">Si alguna vez lo dudas...</span>
+                <h2>Por Qué Te Amo</h2>
+                <div class="separator"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.28 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.09C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.28 18.6,15.36 13.45,20.04L12,21.35Z"/></svg></div>
+            </div>
+
+            <div class="magic-generator-wrapper" data-aos="zoom-in">
+                <div class="magic-content">
+                    <div class="quote-marks">"</div>
+                    <p id="reason-text" class="reason-text">Toca el botón para descubrir una razón.</p>
+                    <div class="quote-marks bottom">"</div>
+                </div>
+                <button id="generate-reason-btn" class="btn-elegant pulse-btn">Dime por qué me quieres</button>
+                <p id="secret-message" class="secret-msg"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="estrellas" class="starmap-section starlight-bg">
+        <div class="starmap-overlay"></div>
+        <div class="container starmap-container">
+            <div class="starmap-text" data-aos="fade-up">
+                <h2>El Cielo de Nuestra Noche</h2>
+                <p>Bajo este manto de estrellas y esta luna mágica, el 18 de Agosto de 2023, nuestros caminos se cruzaron para siempre.</p>
+            </div>
+            
+            <div class="moon-image-only-container" data-aos="zoom-in">
+                <img src="luna.png" alt="La Luna de Nuestra Noche" class="user-moon-img-only" onerror="this.src='https://images.unsplash.com/photo-1532693322450-2cb5c511067d?q=80&w=600&auto=format&fit=crop'">
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="sub-heading">Instantes eternos</span>
+                <h2>Álbum de Memorias</h2>
+                <div class="separator"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.28 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.09C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.28 18.6,15.36 13.45,20.04L12,21.35Z"/></svg></div>
+            </div>
+
+            <div class="masonry-grid" id="lightgallery">
+                <div class="masonry-item frame-tilt-1" data-aos="fade-up">
+                    <div class="photo-frame">
+                        <div class="image-wrapper ratio-4-3 bg-img-1"><div class="image-overlay"><span class="overlay-icon">🤍</span><h3 class="overlay-title">Nuestra primera foto</h3></div></div>
+                        <div class="frame-caption">El inicio de todo</div>
+                    </div>
+                </div>
+                <a href="#" class="masonry-item frame-tilt-2" data-aos="fade-up" style="cursor: default">
+                    <div class="photo-frame">
+                        <div class="image-wrapper ratio-4-3">
+                            
+                            <video src="risas.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; z-index: 1;"></video>
+                            
+                            <div class="image-overlay" style="z-index: 2;">
+                                <span class="overlay-icon">✨</span>
+                                <h3 class="overlay-title">Risas sin motivo</h3>
+                            </div>
+                        </div>
+                        <div class="frame-caption">Mi sonido favorito</div>
+                    </div>
+                </a>
+                <div class="masonry-item frame-tilt-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="photo-frame">
+                        <div class="image-wrapper ratio-3-4 bg-img-3"><div class="image-overlay"><span class="overlay-icon">🌅</span><h3 class="overlay-title">Atardeceres</h3></div></div>
+                        <div class="frame-caption">Tú y yo contra el mundo</div>
+                    </div>
+                </div>
+                <a href="#" class="masonry-item frame-tilt-2" data-aos="fade-up" style="cursor: default">
+                    <div class="photo-frame">
+                        <div class="image-wrapper ratio-4-3">
+                            
+                            <video src="aventuras.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; z-index: 1;"></video>
+                            
+                            <div class="image-overlay" style="z-index: 2;">
+                                <span class="overlay-icon">✈️</span>
+                                <h3 class="overlay-title">Aventura locas</h3>
+                            </div>
+                        </div>
+                        <div class="frame-caption">Cualquier lugar es hogar</div>
+                    </div>
+                </a>
+                
+                <div class="masonry-item frame-tilt-1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="photo-frame">
+                        <div class="image-wrapper ratio-4-3 bg-img-5"><div class="image-overlay"><span class="overlay-icon">☕</span><h3 class="overlay-title">Días de paz</h3></div></div>
+                        <div class="frame-caption">La calma en tus brazos</div>
+                    </div>
+                </div>
+                <div class="masonry-item frame-tilt-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="photo-frame">
+                        <div class="image-wrapper ratio-1-1 bg-img-6"><div class="image-overlay"><span class="overlay-icon">♾️</span><h3 class="overlay-title">Para siempre</h3></div></div>
+                        <div class="frame-caption">Tres años y sumando</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="carta-section" class="letter-trigger-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="sub-heading">Solo para tus ojos</span>
+                <h2>Palabras del Corazón</h2>
+                <div class="separator"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.28 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.09C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.28 18.6,15.36 13.45,20.04L12,21.35Z"/></svg></div>
+            </div>
+
+            <div class="mail-stage" data-aos="zoom-in">
+                <div class="premium-envelope" id="the-envelope">
+                    <div class="envelope-shadow"></div>
+                    <div class="env-front">
+                        <div class="stamp"></div>
+                        <div class="address-lines"><p class="cursive">Para: Mi persona favorita</p></div>
+                    </div>
+                    <div class="env-back">
+                        <div class="flap top-flap" id="flap-top"></div>
+                        <div class="flap bottom-flap"></div>
+                        <div class="flap left-flap"></div>
+                        <div class="flap right-flap"></div>
+                        <div class="wax-seal" id="wax-seal"><div class="wax-inner">III</div></div>
+                        <div class="dummy-letter"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <h2 class="footer-logo">Tres Años Juntos</h2>
+            <div class="footer-heart"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.28 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.09C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.28 18.6,15.36 13.45,20.04L12,21.35Z"/></svg></div>
+            <p class="footer-text">Diseñado y programado con cada latido de mi corazón.</p>
+            <p class="copyright">&copy; <span id="year"></span> Nuestro Amor. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="letter-modal-overlay" id="cinematic-letter">
+        <div class="cinematic-bg-elements">
+            <div class="stars-layer"></div>
+            <div class="twinkle-layer"></div>
+        </div>
+        
+        <div class="letter-modal-scroll-container" id="modal-scroll-area">
+            <div class="letter-modal-content">
+                <div class="letter-close-btn" id="close-letter">&times;</div>
+                <div class="letter-texture">
+                    <div class="letter-header">
+                        <div class="letter-date">18 de Agosto, 2026</div>
+                        <h3 class="letter-greeting">Mi Amor,</h3>
+                    </div>
+                    <div class="letter-body">
+                        <p>Parece mentira que ya hayan pasado tres años. Tres años completos, 36 meses, más de mil días desde que decidimos que nuestras vidas serían inmensamente mejores si las vivíamos de la mano.</p>
+                        <p>Quería hacer algo verdaderamente especial, algo que perdurara en el tiempo. Un rincón digital solo nuestro, porque sé que las palabras a veces se las lleva el viento, pero lo que siento por ti está codificado en lo más profundo de mi corazón.</p>
+                        <p>Has sido mi mayor apoyo incondicional, mi paz en las tormentas más ruidosas y la razón exacta por la que sonrío al despertar cada mañana. A tu lado he aprendido que el amor no es solo mirarnos, sino mirar juntos hacia la misma dirección.</p>
+                        <p>Gracias por cada instante. Por hacerme querer ser una mejor persona. Brindo por todos los recuerdos hermosos que hemos creado, y por los millones de momentos que aún nos quedan por vivir juntos.</p>
+                    </div>
+                    <div class="letter-footer">
+                        <p class="letter-closing">Feliz tercer aniversario.</p>
+                        <p class="letter-signature">Siempre tuyo/a.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
