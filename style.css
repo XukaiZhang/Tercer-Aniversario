@@ -253,9 +253,9 @@ body.modal-open { overflow: hidden; height: 100vh; touch-action: none; padding-r
 .ratio-16-9 { aspect-ratio: 16 / 9; }
 .image-wrapper::before { content: ''; position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.8s ease; filter: sepia(0.2) contrast(1.1); z-index: 1; }
 .masonry-item:hover .image-wrapper::before { filter: sepia(0) contrast(1); } 
-.bg-img-1::before { background-image: url('primera-foto.jpeg'); }
+.bg-img-1::before { background-image: url('assets/images/primera-foto.jpeg'); }
 .bg-img-2::before { background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%); }
-.bg-img-3::before { background-image: url('atardecer.jpeg'); }
+.bg-img-3::before { background-image: url('assets/images/atardecer.jpeg'); }
 .bg-img-4::before { background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); }
 .bg-img-5::before { background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
 .bg-img-6::before { background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); }
