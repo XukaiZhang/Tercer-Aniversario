@@ -133,18 +133,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const secretMsg = document.getElementById('secret-message');
     
     const razones = [
-        "Por la forma en la que me miras cuando crees que no me doy cuenta.",
-        "Porque haces que cualquier día gris se vuelva automáticamente el mejor.",
-        "Por tu forma de reírte a carcajadas de mis chistes malos.",
-        "Porque contigo aprendí que el amor verdadero da muchísima paz.",
-        "Por la paciencia infinita que tienes conmigo.",
-        "Porque eres mi mayor inspiración para querer ser una mejor versión de mí.",
-        "Por cómo te brillan los ojos cuando hablas de lo que te apasiona.",
-        "Porque, sin importar dónde estemos, a tu lado siempre me siento en casa.",
+        "Por todo el amor incondicional que me das.",
+        "Porque consigues que cualquier día malo se vuelva el mejor.",
+        "Por todas las veces que me has escuchado.",
+        "Por tu forma de reírte de mis bromas.",
+        "Porque contigo aprendí que el amor verdadero es hermoso.",
+        "Por la paciencia que tienes conmigo.",
+        "Porque eres la única que me entiende",
+        "Porque eres mi mayor motivación para querer ser la mejor versión de mí.",
+        "Por cómo te brillan los ojos cuando hablas de lo que te gusta.",
+        "Porque a pesar de todo sigues a mi lado y amándome",
+        "Porque a tu lado siempre me siento en casa.",
         "Por cómo me abrazas cuando más lo necesito sin que yo tenga que pedirlo.",
-        "Porque me conoces mejor que nadie, me aceptas y me amas sin reservas.",
-        "Por todas nuestras bromas internas que nadie más entiende.",
-        "Porque haces que el mundo parezca un lugar mucho menos aterrador."
+        "Porque me conoces mejor que nadie, me aceptas y me amas como soy.",
+        "Por todas nuestras bromas internas que nadie más entendería.",
+        "Por siempre estar ahí para mí",
+        "Porque haces que el mundo sea un lugar mucho más bonito y mejor.",
+        "Porque sin ti nada sería igual",
+
     ];
     
     let clickCount = 0;

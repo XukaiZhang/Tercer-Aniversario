@@ -258,7 +258,7 @@ body.modal-open { overflow: hidden; height: 100vh; touch-action: none; padding-r
 .bg-img-3::before { background-image: url('assets/images/atardecer.jpeg'); }
 .bg-img-4::before { background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); }
 .bg-img-5::before { background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
-.bg-img-6::before { background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); }
+.bg-img-6::before { background-image: url('assets/images/años.jpeg'); }
 .image-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.4); z-index: 2; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: var(--t-fast); backdrop-filter: blur(2px); }
 .masonry-item:hover .image-overlay { opacity: 1; }
 .overlay-icon { font-size: 2rem; margin-bottom: 10px; transform: scale(0.5); opacity: 0; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.26, 1.55) 0.1s; }
